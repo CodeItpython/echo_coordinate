@@ -10,17 +10,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CoordinateController {
 
-    @GetMapping("/api/get_all_data")
+    @PostMapping("/api/get_all_data")
     public CoordinateDTO getData(@RequestBody CoordinateDTO coordinateDTO) {
         return coordinateDTO;
     }
 
-    @GetMapping("/api/response_ok")
+    @PostMapping("/api/response_ok")
     public ResponseEntity<String> alwaysOK() {
         return ResponseEntity.ok().build(); //return 200ok
     }
 
-    @GetMapping("/api/response_bad")
+    @PostMapping("/api/response_bad")
     public ResponseEntity<String> alwaysBadRequest() {
         return ResponseEntity.badRequest().build(); //return Bad Request
     }
